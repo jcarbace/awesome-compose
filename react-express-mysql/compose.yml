@@ -1,0 +1,9 @@
+trigger:
+- main
+steps:
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Container Registry'
+    dockerRegistryEndpoint: 'DockerHub'
+    dockerComposeFile: '**/compose.yaml'
+    action: 'Push services'
